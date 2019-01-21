@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('link',function () {
+    Artisan::call('storage:link');
+    symlink("~/app/storage/app/public", "~/app/public/storage");
+});
 Route::group([
     'middleware' => ['web', 'localeSessionRedirect', 'localizationRedirect'],
     'prefix' => LaravelLocalization::setLocale()
