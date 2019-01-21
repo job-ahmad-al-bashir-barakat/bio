@@ -12,7 +12,7 @@
 */
 
 Route::get('link',function () {
-    Artisan::call('storage:link');
+    return Artisan::call('storage:link');
 });
 Route::group([
     'middleware' => ['web', 'localeSessionRedirect', 'localizationRedirect'],
