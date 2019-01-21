@@ -1,0 +1,57 @@
+
+/** -------------------------------------
+                   Like
+ --------------------------------------- */
+
+.liked {
+    position: relative;
+}
+
+.liked-count.liked-count-sm {
+    position: absolute;
+    font-size: 0.56em;
+    border-radius: 15px;
+    height: 15px;
+    line-height: 12px;
+    bottom: 10px;
+    left: 10px;
+}
+
+.liked-count.liked-count-lg {
+    position: absolute;
+    font-size: 0.56em;
+    border-radius: 15px;
+    height: 15px;
+    line-height: 10px;
+    bottom: 15px;
+    left: 15px;
+}
+
+/** -------------------------------------
+              comment modal
+ --------------------------------------- */
+
+#modal-comment textarea::-webkit-scrollbar {
+    width: 0 !important
+}
+
+.comments-list::-webkit-scrollbar {
+    width: 0 !important
+}
+
+/** -------------------------------------
+                    rate
+ --------------------------------------- */
+
+.theme-krajee-svg.rating-xs .krajee-icon {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/** -------------------------------------
+                helper
+ --------------------------------------- */
+
+.hand {
+    cursor: pointer;
+}

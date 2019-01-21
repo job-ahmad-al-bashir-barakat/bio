@@ -1,0 +1,1 @@
+@include('control::tables._apply')

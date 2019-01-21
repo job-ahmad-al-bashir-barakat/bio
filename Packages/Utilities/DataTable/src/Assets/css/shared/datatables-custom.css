@@ -1,0 +1,461 @@
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:after
+{
+    font-family:FontAwesome, 'Glyphicons Halflings';
+    font-weight: lighter;
+}
+
+table.dataTable thead .sorting:after{
+
+    content: "\f106";
+    font-size: 16px!important;
+    font-weight: bolder;
+}
+
+table.dataTable thead .sorting_asc:after {
+    content: "\f106";
+    font-size: 16px!important;
+    font-weight: bolder;
+}
+
+table.dataTable thead .sorting_desc:after {
+    content: "\f107";
+    font-size: 16px!important;
+    font-weight: bolder;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:after
+{
+    bottom: 12px!important;
+}
+
+table.custom-table tbody .center,
+table.custom-table thead .center{
+    text-align: center;
+}
+
+table.custom-table tbody .center a{
+    color: #888;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+table.custom-table tbody .child ul a {
+    color: #888;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.dataTables_scrollFootInner {
+    padding: 0 !important;
+    width: auto !important;
+}
+
+.dataTables_scrollFootInner .table.dataTable {
+    margin-bottom: 0 !important;
+}
+
+table.custom-table tfoot .table-button a i,
+.dataTables_scroll .dt-buttons a i{
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+
+table.custom-table .button-style,
+.dataTables_scroll .button-style {
+    font-size:15px;
+    border-radius:0;
+    background-color: #fbfbfb;
+    border: none;
+}
+
+table.custom-table .btn-default.button-style:hover,
+table.custom-table .btn-default.button-style:active,
+.dataTables_scroll .btn-default.button-style:active,
+.dataTables_scroll .btn-default.button-style:hover {
+    box-shadow: none;
+    background-color: #efefef;
+}
+
+table.custom-table tfoot .table-button,
+.dataTables_scroll .dt-buttons{
+    background-color: #fbfbfb;
+    width: 100%;
+    padding: 0;
+}
+
+table.custom-table .btn.button-style i,
+.dataTables_scroll .btn.button-style i {
+    padding: 11px 6px;
+    color: #888;
+}
+
+table.dataTable thead .sorting:after {
+    font-size: 12px;
+}
+
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:after {
+    bottom: 15px;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #fafbfc;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th,
+.table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-top: 1px solid #eeeeee;
+}
+
+.none-background {
+    background: none!important;
+}
+
+ul.dt-button-collection.dropdown-menu {
+    padding: 0;
+    height: 150px;
+    overflow-y: auto;
+}
+
+ul.dt-button-collection.dropdown-menu::-webkit-scrollbar {
+    width: 4px;
+}
+
+ul.dt-button-collection.dropdown-menu::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+ul.dt-button-collection.dropdown-menu::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(217, 218, 214, 0.92);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+ul.dt-button-collection.dropdown-menu::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(238, 229, 241, 0.4);
+}
+
+ul.dt-button-collection.dropdown-menu > li > a {
+    padding: 5px 20px;
+}
+
+ul.dt-button-collection.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    background-color: #888888;
+}
+
+table.dataTable>tbody>tr.child span.dtr-title {
+    min-width: 200px;
+}
+
+table.dataTable>tbody>tr.child ul li {
+    padding: 5px;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
+    content: "\f107";
+    background: none;
+}
+
+.dataTables_processing {
+    background: none;
+    border: none;
+    box-shadow: none;
+    z-index: 6;
+}
+
+.dataTables_processing > div {
+    background-color: #999999!important;
+    z-index: 100;
+}
+
+.spinners-overlay {
+    position: relative;
+}
+
+.spinners-overlay:before {
+    content: "";
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #f0f0f0;
+    opacity: 0.6;
+    display: inherit;
+}
+
+div.dt-button-info {
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+    border: 2px solid rgb(204, 204, 204);
+    z-index: 300;
+}
+
+table.dataTable tbody.sortable tr {
+    cursor: move;
+}
+
+@media screen and (max-width: 768px) {
+
+    .dataTables_wrapper > .row > div {
+
+        width: auto !important;
+    }
+
+    div.dt-buttons {
+
+        margin-bottom: 0em;
+    }
+
+    /*fix paginate align*/
+    div.dataTables_wrapper div.dataTables_paginate {
+        padding-top: 10px;
+        text-align: center !important;
+    }
+
+    li.paginate_button.previous {
+        display: inline;
+    }
+
+    li.paginate_button.next {
+        display: inline;
+    }
+
+    li.paginate_button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .dataTables_wrapper > .row > div {
+
+        width: 100% !important;
+        padding-top: 5px;
+    }
+}
+
+/*------------------------------------
+              scroll style
+--------------------------------------*/
+
+.dataTables_scrollBody::-webkit-scrollbar {
+    width: 1em;
+    height: 4px;
+}
+
+.dataTables_scrollBody::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+
+.dataTables_scrollBody::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+div.dataTables_wrapper div.dataTables_paginate
+table.dataTable tfoot > tr > th {
+    color: #a1a2a3;
+    background: #f1f2f3;
+    padding: 3px 5px 3px;
+}
+
+table.dataTable tfoot > tr > th > input.filter-Input,
+table.dataTable tfoot > tr > th > select.filter-select{
+    width: 100%;
+    border-radius: 0;
+    padding: 8px !important;
+}
+
+table.dataTable tfoot th .select2-selection {
+    border-radius: 0!important;
+}
+
+table.dataTable > thead > tr:not(.hiddenRowInline) > th {
+    border-top: 0;
+}
+
+/*------------------------------------
+     fix autocomplete style error
+--------------------------------------*/
+.select2-container { z-index: 999999 }
+
+.modal .select2-container--bootstrap.select2-container--focus .select2-selection, .select2-container--bootstrap.select2-container--open .select2-selection {
+
+    box-shadow: none;
+    transition: none;
+}
+
+.modal .has-error .select2-dropdown, .has-error .select2-selection {
+
+    border-color: #f05050;
+}
+
+.modal .has-error .select2-container--focus .select2-selection, .has-error .select2-container--open .select2-selection {
+
+    border-color: #f05050;
+}
+
+/*------------------------------------
+     input number turn of spinners
+        ** all input number **
+        ** Datatable Style **
+--------------------------------------*/
+
+.modal input[type=number].none-spinner::-webkit-inner-spin-button,
+.modal input[type=number].none-spinner::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*------------------------------------
+   Component: form-validation.less
+--------------------------------------*/
+
+.modal.datatable-modal .validate-error {
+    border-color: #f05050 !important;
+}
+
+.modal.datatable-modal .validate-error-help-block {
+    display: block;
+}
+
+.modal.datatable-modal .validate-error-style {
+    font-size: 12px;
+    list-style: none;
+    color: #f05050;
+}
+
+/*------------------------------------
+        padding all input,select
+--------------------------------------*/
+
+html[lang=ar] .modal input ,select {
+    padding-right: 10px !important;
+}
+
+html[lang=en] .modal input ,select {
+    padding-left: 10px !important;
+}
+
+/*------------------------------------
+            popover style
+--------------------------------------*/
+/*
+.datatable-popover {
+    font-family: "Source Sans Pro" ,"JF Flat Regular";
+    width: 200px;
+}
+
+.datatable-popover.popover {
+    padding: 0;
+}
+
+.datatable-popover .panel-heading {
+    padding: 6px 3px;;
+}
+
+.datatable-popover .popover-title {
+    background-color: transparent;
+    font-weight: bold;
+    padding: 0px 8px;
+}
+
+.datatable-popover .mr-5 {
+    margin-right: 5px !important;
+}
+
+.datatable-popover .panel-footer {
+    padding: 6px 8px;
+}
+
+.popover > .select2-container > .select2-dropdown {
+    top: -3px;
+    left: -1px;
+}
+
+table.dataTable .table-inline {
+    position: relative;
+}
+*/
+
+/*------------------------------------
+                 Modal
+--------------------------------------*/
+
+.modal-body .datatable .row {
+    padding: 15px;
+}
+
+.datatable-modal .datatable-sidebar-tab-erea {
+    z-index: 999999;
+}
+
+/*
+.datatable-modal .datatable-sidebar-tab {
+    margin-bottom: 15px;
+}
+*/
+
+@media (max-width: 992px) {
+
+    div.bhoechie-tab-menu div.list-group>a.active:after {
+
+        border-left: 0;
+        border-right: 0;
+    }
+}
+
+/*------------------------------------
+          Code/pre Sweet Alert
+--------------------------------------*/
+
+.swal2-modal pre {
+    font-weight: 400;
+    background-color: ghostwhite;
+    border: 1px solid silver;
+    padding: 10px 20px;
+    margin: 20px;
+}
+
+.json-key    { color: brown; }
+.json-value  { color: navy; }
+.json-string { color: olive; }
+
+.swal2-container {
+    z-index: 900000;
+}
+
+/*------------------------------------
+              Row Details
+--------------------------------------*/
+
+td.details-control:hover { cursor: pointer }
+
+/*------------------------------------
+                global
+--------------------------------------*/
+
+.datatable-m-top-5 { margin-top: 5px; }
+
+.datatable-no-padding { padding: 0; !important; }
+
+.datatable-no-margin  { margin: 0; !important; }
+
+.hand { cursor: pointer; }
+
+.datatable-icon-hand { font-size: 16px; cursor: pointer; }

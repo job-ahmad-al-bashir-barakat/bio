@@ -1,0 +1,58 @@
+<?php
+
+namespace App\Http\Factory;
+
+use Aut\DataTable\DataTableBuilder;
+use Aut\DataTable\Http\Maker\BaseDataTableMaker;
+
+use DB;
+
+class DatatableMaker
+{
+    // use CustomDatatableMaker;
+
+    protected $table;
+
+    public function __construct(DataTableBuilder $table)
+    {
+        $this->table = $table;
+    }
+
+    /**
+     * --------------------------------------
+     *             example Table
+     * --------------------------------------
+     */
+
+    public function get_example_table($model, $request)
+    {
+        $query = DB::table('examples')->select([
+            'examples.example_id as id',
+            'examples.example_name_en as name_en',
+            'examples.example_name_ar as name_ar',
+            'examples.example_code as code',
+        ])
+        ->whereNull('examples.deleted_at');
+
+        return $this->table
+            ->queryConfig('datatable-example')
+            ->queryDatatable($query)
+            ->queryUpdateButton('id')
+            ->queryDeleteButton('id')
+            ->queryRender();
+    }
+
+    public function build_example_table($model, $request)
+    {
+        return $this->table
+            ->config('datatable-example',trans('admin::app.title_example'))
+            ->addHiddenInput('id','examples.example_id','',true)
+            ->addInputText('title_example_name_en','name_en','examples.example_name_en','en required req')
+            ->addInputText('title_example_name_ar','name_ar','examples.example_name_en','ar required req')
+            ->addInputText(trans('gen.code'),'code','examples.example_code','required req','maxlength="3"')
+            ->addActionButton($this->update,'update','update')
+            ->addActionButton($this->delete,'delete','delete')
+            ->addNavButton()
+            ->render();
+    }
+}

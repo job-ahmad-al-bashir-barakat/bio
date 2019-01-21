@@ -1,0 +1,57 @@
+<?php
+
+namespace DummyNamespace;
+
+use Aut\DataTable\Factories\GlobalFactory;
+
+class DummyClass extends GlobalFactory
+{
+
+    /**
+     *  get datatable query
+     */
+    public function getDatatable($DummyModel, $request)
+    {
+        //
+    }
+
+    /**
+     *  build datatable modal and table
+     */
+    public function buildDatatable($DummyModel, $request)
+    {
+        //
+    }
+
+    /**
+     *  store action for save relation
+     */
+    public function storeDatatable($DummyModel = null, $request = null, $result = null)
+    {
+        //
+    }
+
+    /**
+     *  update action for update relation
+     */
+    public function updateDatatable($DummyModel = null, $request = null, $result = null)
+    {
+        //
+    }
+
+    /**
+     *  destroy action for destroy relation
+     */
+    public function destroyDatatable($DummyModel = null, $request = null, $result = null)
+    {
+        //
+    }
+
+    /**
+     *  inline validate dialog form
+     */
+    public function validateDatatable()
+    {
+        return [];
+    }
+}

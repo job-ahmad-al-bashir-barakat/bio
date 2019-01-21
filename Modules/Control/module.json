@@ -1,0 +1,16 @@
+{
+    "name": "Control",
+    "alias": "control",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Control\\Providers\\ControlServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

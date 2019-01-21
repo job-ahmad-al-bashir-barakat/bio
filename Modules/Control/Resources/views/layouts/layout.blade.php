@@ -1,0 +1,1 @@
+@include('control.layout' ,['module' => 'control'])

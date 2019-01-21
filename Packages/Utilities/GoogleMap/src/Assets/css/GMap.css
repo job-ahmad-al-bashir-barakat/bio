@@ -1,0 +1,65 @@
+
+/*-----------------------------------------------------
+    Google map :  # autocomplete on modal bootstrap
+--------------------------------------------------------*/
+
+.map-autocomplete {
+
+    margin-top: 9px;
+    margin-right: 8px;
+    padding: 8px;
+    border: 1px solid #e2e2e2;
+    width: 80%;
+}
+
+.pac-container {
+
+    z-index: 999999;
+}
+
+.table-dynamic .delete-action{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: pointer;
+    color: #f05050;
+}
+
+.table-dynamic .delete-action:before{
+    content: "\f00d";
+}
+
+.table-dynamic .row-for-delete .delete-action:before {
+    color: #27c24c;
+}
+.table-dynamic .row-for-delete .delete-action:before {
+    content: "\f112";
+}
+.table-dynamic .row-for-delete{
+    background-color: rgba(240, 80, 80, 0.13) !important;
+}
+
+td.center {
+    text-align: center;
+}
+
+.sortable-placeholder-dot
+{
+    border-style: dotted;
+    height: 1.5em;
+    line-height: 1.2em;
+}
+
+.sortable-placeholder-dashed
+{
+    border-style: dashed;
+    height: 1.5em;
+    line-height: 1.2em;
+}
+
+.p-0 { padding: 0; }
+
+.hand { cursor: pointer; }

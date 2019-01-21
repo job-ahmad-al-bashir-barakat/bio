@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace;
+
+use Aut\DataTable\Factories\GlobalFactory;
+
+class DummyClass extends GlobalFactory
+{
+    //
+}

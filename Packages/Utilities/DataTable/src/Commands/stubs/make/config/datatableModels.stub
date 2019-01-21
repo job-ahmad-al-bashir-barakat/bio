@@ -1,0 +1,23 @@
+<?php
+
+/**
+ *  you must add here route and model and view foreach
+ *
+ *  model             : you must add model for datatable
+ *  dataTableFunc     : default funcName is get_datatable // add name for maker method ,this name will be used in maker class or in factory class as get_func / build_func / store_func / update_fund / destroy_func
+ *  middlewares       : you can make auth by pass string or array to this property
+ *  middlewaresOption : this option allow you to only make auth on on action or except action from auth by pass array
+ *  request           : this is must be Form Request Class
+ *  stopOperation     : for stop normal oper and add custom oper ['store','update','destroy']
+ *  factory           : the default factory is  modelFactory unless you add you own factory property
+ *
+ */
+
+return [
+
+    'route_model' => [
+        'model'         => '',
+        'dataTableFunc' => ''
+    ],
+
+];
