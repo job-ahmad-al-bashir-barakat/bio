@@ -2,9 +2,10 @@
 
 namespace App\Providers;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Config;
+use Carbon\Carbon;
 use Schema;
 
 class AppServiceProvider extends ServiceProvider
