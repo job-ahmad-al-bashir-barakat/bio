@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('link',function () {
-    return Artisan::call('storage:link');
-});
 Route::group([
     'middleware' => ['web', 'localeSessionRedirect', 'localizationRedirect'],
     'prefix' => LaravelLocalization::setLocale()
