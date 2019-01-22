@@ -22,14 +22,14 @@ class MainController extends Controller
     {
         $categories = Category::all();
 
-        return view('site.home', compact('categories'));
+        return view('site.home', ['categories' => $categories]);
     }
 
     function news ()
     {
         $news = News::paginate(5);
 
-        return view('site.page.news' ,compact('news'));
+        return view('site.page.news' ,['news' => $news]);
     }
 
 //    function about ()
@@ -49,14 +49,14 @@ class MainController extends Controller
             ];
         });
 
-        return view('site.page.faq', compact('faqs' ,'faqTypesNames'));
+        return view('site.page.faq', ['faqs' => $faqs, 'faqTypesNames' => $faqTypesNames]);
     }
 
     function profile ()
     {
         $user = \Auth::user();
 
-        return view('site.page.profile',compact('user'));
+        return view('site.page.profile',['user' => $user]);
     }
 
     private function UploadImage(Request $request ,$image)

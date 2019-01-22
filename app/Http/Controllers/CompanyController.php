@@ -33,7 +33,7 @@ class CompanyController extends Controller
             ->where('user_id','<>',\Auth::id())
             ->paginate(5);
 
-        return view('site.company.companies',compact('companies'));
+        return view('site.company.companies',['companies' => $companies]);
     }
 
     public function owner()
@@ -41,7 +41,7 @@ class CompanyController extends Controller
         $companies = Company::where('user_id','=',\Auth::id())
             ->paginate(5);
 
-        return view('site.company.my_companies',compact('companies'));
+        return view('site.company.my_companies',['companies' => $companies]);
     }
 
     public function show($id)
@@ -63,6 +63,6 @@ class CompanyController extends Controller
             ->where('company_id','=',$id)
             ->take(3)->get();
 
-        return view('site.company.company-detail',compact('company','jobs'));
+        return view('site.company.company-detail',['company' => $company,'jobs' => $jobs]);
     }
 }

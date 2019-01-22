@@ -114,7 +114,7 @@ class JobController extends Controller
         $contracts  = Contract::all();
         $degrees    = Degree::all();
 
-        return view('site.position.jobs',compact('jobs','categories','hourlyRate','contracts','degrees'));
+        return view('site.position.jobs',['jobs' => $jobs, 'categories' => $categories, 'hourlyRate' => $hourlyRate, 'contracts' => $contracts, 'degrees' => $degrees]);
     }
 
     public function owner()
@@ -125,7 +125,7 @@ class JobController extends Controller
             ->orderBy('last_update','desc')
             ->paginate(5);
 
-        return view('site.position.my_jobs',compact('jobs'));
+        return view('site.position.my_jobs',['jobs' => $jobs]);
     }
 
     public function category($id)
@@ -144,7 +144,7 @@ class JobController extends Controller
         $contracts  = Contract::all();
         $degrees    = Degree::all();
 
-        return view('site.position.jobs',compact('jobs','categories','hourlyRate','contracts','degrees'));
+        return view('site.position.jobs',['jobs' => $jobs ,'categories' => $categories ,'hourlyRate' => $hourlyRate ,'contracts' => $contracts ,'degrees' => $degrees ]);
     }
 
     public function show($id)
@@ -153,7 +153,7 @@ class JobController extends Controller
             ->where('id', '=', $id)
             ->first();
 
-        return view('site.position.job-detail', compact('job'));
+        return view('site.position.job-detail', ['job' => $job]);
     }
 
     public function apply($id)
@@ -170,7 +170,7 @@ class JobController extends Controller
             ->take(5)
             ->get();
 
-        return view('site.position.job-apply', compact('job','resumes'));
+        return view('site.position.job-apply', ['job' => $job, 'resumes' => $resumes ]);
     }
 
     public function send(Request $request, $id)

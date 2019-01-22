@@ -94,7 +94,7 @@ class ResumeController extends Controller
         $hourlyRate = HourlyRate::all();
         $degrees = Degree::all();
 
-        return view('site.resume.resumes',compact('resumes','hourlyRate','degrees'));
+        return view('site.resume.resumes',[ 'resumes' => $resumes, 'hourlyRate' => $hourlyRate, 'degrees' => $degrees ]);
     }
 
     public function owner()
@@ -104,7 +104,7 @@ class ResumeController extends Controller
             ->orderBy('last_update','desc')
             ->paginate(5);
 
-        return view('site.resume.my_resumes',compact('resumes'));
+        return view('site.resume.my_resumes',['resumes' => $resumes]);
     }
 
     public function show($id)
@@ -114,7 +114,7 @@ class ResumeController extends Controller
             ->where('is_visible','=',true)
             ->first();
 
-        return view('site.resume.resume-detail', compact('resume'));
+        return view('site.resume.resume-detail', ['resume' => $resume ]);
     }
 
     public function apply($id)
@@ -132,7 +132,7 @@ class ResumeController extends Controller
             $query->where('user_id','=',\Auth::id());
         })->take(5)->get();
 
-        return view('site.resume.resume-apply', compact('resume','jobs'));
+        return view('site.resume.resume-apply', ['resume' => $resume,'jobs' => $jobs]);
     }
 
     public function send(Request $request,$id)
