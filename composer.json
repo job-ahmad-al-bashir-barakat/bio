@@ -4,6 +4,11 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
+    "config": {
+        "platform": {
+            "php": "5.6.4"
+        }
+    },
     "require": {
         "php": "~5.6.4",
         "iatstuti/laravel-cascade-soft-deletes": "^1.3",
