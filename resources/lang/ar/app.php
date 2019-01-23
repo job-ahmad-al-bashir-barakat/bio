@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'load_more'     => 'تحميل المزيد',
     'open_position' => 'وظيفة مفتوحة',
     'from'          => 'من',
