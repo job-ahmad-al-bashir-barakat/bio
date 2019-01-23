@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -9,12 +9,6 @@ let mix = require('laravel-mix');
  | for your Laravel application. By default, we are compiling the Sass
  | file for the application as well as bundling up all the JS files.
  |
- */
-
-
-/**
- * Theme - Site - css
- *
  */
 
 ['ltr','rtl'].forEach(function (dir, index) {

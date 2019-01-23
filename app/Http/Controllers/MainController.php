@@ -88,7 +88,12 @@ class MainController extends Controller
     function changeProfile (Request $request)
     {
 
-        $image = $this->UploadImage($request,'personal_image');
+        if(request()->file('personal_image',false)) {
+            $image = $this->UploadImage($request,'personal_image');
+            $image = ['image_id' => $image->id];
+        } else {
+            $image = [];
+        }
 
         $checkPassword = [];
 
@@ -102,7 +107,7 @@ class MainController extends Controller
             'email' => 'required|string|email|max:255|unique:users,email,'.\Auth::id().',id'
         ],$checkPassword));
 
-        \Auth::user()->update(array_merge($request->except('_token'),['image_id' => $image->id]));
+        \Auth::user()->update(array_merge($request->except('_token'), $image));
 
         return \Redirect::back();
     }

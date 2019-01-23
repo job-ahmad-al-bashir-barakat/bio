@@ -8,7 +8,7 @@
 
 namespace Aut\DataTable\Traits;
 
-use Datatables;
+use DataTables;
 
 trait QueryDataTable
 {
@@ -22,7 +22,7 @@ trait QueryDataTable
      */
     function queryDatatable($query)
     {
-        $this->query = Datatables::of($query);
+        $this->query = DataTables::of($query);
 
         $this->queryIndexColumn();
 
@@ -35,7 +35,7 @@ trait QueryDataTable
      */
     function queryDatatableEloquent($model)
     {
-        $this->query = Datatables::eloquent($model);
+        $this->query = DataTables::eloquent($model);
 
         $this->queryIndexColumn();
 

@@ -15,8 +15,8 @@
         {{ $title }}
     </div>
     <div class="panel-wrapper">
-        <div class="panel-body {{ $class or '' }}">
-            {!! $slot or $html !!}
+        <div class="panel-body {{ $class ?? '' }}">
+            {!! $slot ?? $html !!}
         </div>
         @if($footer)
             <div class="panel-footer">

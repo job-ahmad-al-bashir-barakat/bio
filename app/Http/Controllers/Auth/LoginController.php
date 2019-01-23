@@ -27,7 +27,7 @@ class LoginController extends Controller
      */
     protected $redirectTo = '/';
 
-    /**
+	/**
      * Show the application's login form.
      *
      * @return \Illuminate\Http\Response
@@ -36,7 +36,7 @@ class LoginController extends Controller
     {
         return view('site.auth.login');
     }
-
+	
     /**
      * Create a new controller instance.
      *

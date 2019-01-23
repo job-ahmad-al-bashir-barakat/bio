@@ -16,7 +16,7 @@
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="ti-email"></i></span>
-                        <input name="email" type="text" class="form-control" placeholder="Email" value="{{ $email or old('email') }}" required autofocus>
+                        <input name="email" type="text" class="form-control" placeholder="Email" value="{{ $email ?? old('email') }}" required autofocus>
                     </div>
                 </div>
 

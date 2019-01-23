@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\Config;
 use Carbon\Carbon;
 use Schema;
@@ -17,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if($this->app->environment('production')) {
+		if($this->app->environment('production')) {
             // force https
             \URL::forceScheme('https');
         }
@@ -26,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
         $this->morphMap();
     }
 
+	
     function morphMap()
     {
         Relation::morphMap([
@@ -49,7 +50,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if ($this->app->environment() !== 'production') {
+		if ($this->app->environment() !== 'production') {
             $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
         }
 

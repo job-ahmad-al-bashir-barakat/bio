@@ -30,7 +30,7 @@
                                         <h5>{{ $resume->headline }}</h5>
                                     </div>
                                     <div class="header-meta">
-                                        <span class="location" dir="ltr">{{ $resume->contact->geolocation_title[$lang] or '' }}</span>
+                                        <span class="location" dir="ltr">{{ $resume->contact->geolocation_title[$lang] ?? '' }}</span>
                                         <span class="rate" dir="ltr">{{ trans('app.hour_price',['price' => $resume->salary]) }}</span>
                                     </div>
                                 </header>

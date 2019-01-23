@@ -2,7 +2,7 @@
     $width  = isset($width)  ? $width  : false;
 @endphp
 
-<div id='{{ $id or '' }}' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' class='modal fade'>
+<div id='{{ $id ?? '' }}' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' class='modal fade'>
     <div class='modal-dialog' role='document' style="{{ $width ? "min-width: $width;" : "" }}">
         <div class='modal-content'>
 
@@ -11,17 +11,17 @@
                     <span aria-hidden='true'>&times;</span>
                 </button>
                 <h4 id='myModalLabel' class='modal-title'>
-                    {{ $title or '' }}
+                    {{ $title ?? '' }}
                 </h4>
             </div>
 
-            <div class='modal-body clearfix {{ $bodyClass or '' }}' {{ $bodyAttr or '' }}>
+            <div class='modal-body clearfix {{ $bodyClass ?? '' }}' {{ $bodyAttr ?? '' }}>
                 {{ $slot }}
             </div>
 
             <div class='modal-footer'>
                 <button type='button' data-dismiss='modal' class='btn btn-default'>{{ trans('gmap::gmap.close') }}</button>
-                {{ $footer or '' }}
+                {{ $footer ?? '' }}
             </div>
         </div>
     </div>

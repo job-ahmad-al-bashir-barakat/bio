@@ -7,10 +7,10 @@
                 </button>
                 <h5 class="modal-title" id="myModalLabel">{{ $title }}</h5>
             </div>
-            <div class="modal-body {{ $bodyClass or '' }}" {{ $bodyAttr or '' }}>
+            <div class="modal-body {{ $bodyClass ?? '' }}" {{ $bodyAttr ?? '' }}>
                {{ $slot }}
             </div>
-            <div class="modal-footer {{ $footerClass or '' }}" {{ $footerAttr }}>
+            <div class="modal-footer {{ $footerClass ?? '' }}" {{ $footerAttr ?? '' }}>
                 {{ $footer }}
             </div>
         </div>

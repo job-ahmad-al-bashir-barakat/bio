@@ -32,14 +32,14 @@
                             <div class="form-group col-xs-12">
                                 <div class="input-group input-group-sm">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input name="name" type="text" class="form-control" placeholder="{{ trans('app.name') }}" value="{{ $user->name or old('name') }}" required>
+                                    <input name="name" type="text" class="form-control" placeholder="{{ trans('app.name') }}" value="{{ $user->name ?? old('name') }}" required>
                                 </div>
                             </div>
 
                             <div class="form-group col-xs-12">
                                 <div class="input-group input-group-sm">
                                     <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                    <input name="email" type="text" class="form-control" placeholder="{{ trans('app.email_address') }}" value="{{ $user->email or old('email') }}" required>
+                                    <input name="email" type="text" class="form-control" placeholder="{{ trans('app.email_address') }}" value="{{ $user->email ?? old('email') }}" required>
                                 </div>
                             </div>
 

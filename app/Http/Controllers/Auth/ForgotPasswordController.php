@@ -21,7 +21,7 @@ class ForgotPasswordController extends Controller
 
     use SendsPasswordResetEmails;
 
-    /**
+	/**
      * Display the form to request a password reset link.
      *
      * @return \Illuminate\Http\Response
@@ -30,7 +30,6 @@ class ForgotPasswordController extends Controller
     {
         return view('site.auth.passwords.email');
     }
-
 
     /**
      * Create a new controller instance.

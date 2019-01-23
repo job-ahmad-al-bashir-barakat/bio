@@ -26,7 +26,7 @@
                     <ul class="details cols-3">
                         <li>
                             <i class="fa fa-map-marker"></i>
-                            <span>{{ $resume->contact->geolocation_title[$lang] or '' }}</span>
+                            <span>{{ $resume->contact->geolocation_title[$lang] ?? '' }}</span>
                         </li>
 
                         <li>
@@ -39,7 +39,7 @@
                             @if ($resumeEducation->degree->count() || $resumeEducation->majer->count())
                                 <li>
                                     <i class="fa fa-certificate"></i>
-                                    <span>{{ $resumeEducation->degree->{lang('name')} or '' }} - {{ $resumeEducation->majer->name or '' }}</span>
+                                    <span>{{ $resumeEducation->degree->{lang('name')} ?? '' }} - {{ $resumeEducation->majer->name ?? '' }}</span>
                                 </li>
                             @endif
                         @endif

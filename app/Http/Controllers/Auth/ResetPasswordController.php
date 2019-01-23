@@ -28,6 +28,7 @@ class ResetPasswordController extends Controller
      */
     protected $redirectTo = '/';
 
+	
     /**
      * Display the password reset view for the given token.
      *
@@ -43,7 +44,7 @@ class ResetPasswordController extends Controller
             ['token' => $token, 'email' => $request->email]
         );
     }
-
+	
     /**
      * Create a new controller instance.
      *
